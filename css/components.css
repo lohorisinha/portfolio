@@ -148,6 +148,9 @@
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--text3);
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .proj-name {
@@ -222,6 +225,23 @@
 .tag-mint    { background: rgba(168, 230, 206, 0.10); color: var(--mint);     border: 1px solid rgba(168, 230, 206, 0.2); }
 .tag-apricot { background: rgba(245, 200, 160, 0.10); color: var(--apricot);  border: 1px solid rgba(245, 200, 160, 0.2); }
 .tag-sky     { background: rgba(168, 212, 245, 0.10); color: var(--sky);      border: 1px solid rgba(168, 212, 245, 0.2); }
+
+
+/* ════════════════════════════════════
+   BUILDING BADGE
+   ════════════════════════════════════ */
+
+.building-badge {
+  font-size: 10px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 3px 9px;
+  border-radius: var(--radius-sm);
+  background: rgba(245, 200, 160, 0.10);
+  color: var(--apricot);
+  border: 1px solid rgba(245, 200, 160, 0.25);
+}
 
 
 /* ════════════════════════════════════

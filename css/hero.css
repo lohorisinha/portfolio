@@ -103,6 +103,34 @@
   opacity: 0.5;
 }
 
+/* ── Solar system interaction hint (top-center, auto-fades) ── */
+.solar-hint {
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+  font-size: 11px;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  color: var(--text3);
+  background: rgba(8, 7, 20, 0.55);
+  border: 1px solid var(--border);
+  padding: 8px 20px;
+  border-radius: var(--radius-pill);
+  backdrop-filter: blur(10px);
+  white-space: nowrap;
+  pointer-events: none;
+  animation: solarHintFade 7s ease forwards;
+}
+
+@keyframes solarHintFade {
+  0%   { opacity: 0;   transform: translateX(-50%) translateY(-4px); }
+  12%  { opacity: 1;   transform: translateX(-50%) translateY(0);    }
+  72%  { opacity: 1;   transform: translateX(-50%) translateY(0);    }
+  100% { opacity: 0;   transform: translateX(-50%) translateY(-4px); }
+}
+
 /* ── "← Galaxy view" button (shown on planet fly-in) ── */
 #returnBtn {
   display: none; /* shown by solar.js */
@@ -156,5 +184,14 @@
 
   .hero-hint {
     right: 24px;
+  }
+
+  .solar-hint {
+    font-size: 10px;
+    padding: 7px 14px;
+    top: 72px;
+    max-width: calc(100% - 48px);
+    text-align: center;
+    white-space: normal;
   }
 }
