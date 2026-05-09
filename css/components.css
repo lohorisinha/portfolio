@@ -1,0 +1,310 @@
+/*
+ * components.css
+ * ─────────────────────────────────────────────────────
+ * Reusable UI components: cards, tags, badges, buttons,
+ * skill pills, stat blocks.
+ *
+ * These classes can be dropped into any section or
+ * future page without changes.
+ * ─────────────────────────────────────────────────────
+ */
+
+/* ════════════════════════════════════
+   EXPERIENCE CARD
+   ════════════════════════════════════ */
+
+.exp-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 40px 44px;
+  position: relative;
+  overflow: hidden;
+  transition: background var(--transition-normal), border-color var(--transition-normal);
+}
+
+/* Top shimmer line on hover */
+.exp-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--lavender), transparent);
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+.exp-card:hover {
+  background: var(--surface2);
+  border-color: var(--border2);
+}
+
+.exp-card:hover::before {
+  opacity: 1;
+}
+
+.exp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.exp-org {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 22px;
+  letter-spacing: -0.01em;
+  color: var(--text);
+}
+
+.exp-period {
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text3);
+  font-weight: 500;
+  padding-top: 4px;
+  white-space: nowrap;
+}
+
+.exp-bullets {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.exp-bullets li {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text2);
+  font-weight: 300;
+  padding-left: 20px;
+  position: relative;
+}
+
+/* Dash bullet */
+.exp-bullets li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 11px;
+  width: 6px;
+  height: 1px;
+  background: var(--lavender);
+  opacity: 0.5;
+}
+
+@media (max-width: 768px) {
+  .exp-card {
+    padding: 28px 24px;
+  }
+}
+
+
+/* ════════════════════════════════════
+   PROJECT CARD
+   ════════════════════════════════════ */
+
+.proj-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 36px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: background var(--transition-normal), border-color var(--transition-normal), transform var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+.proj-card:hover {
+  background: var(--surface2);
+  border-color: var(--border2);
+  transform: translateY(-4px);
+}
+
+/* Colored corner accent */
+.proj-accent {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 80px;
+  height: 80px;
+  border-radius: 0 var(--radius-lg) 0 80px;
+  opacity: 0.06;
+}
+
+.proj-num {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text3);
+}
+
+.proj-name {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 24px;
+  letter-spacing: -0.01em;
+  color: var(--text);
+}
+
+.proj-name sup {
+  font-size: 12px;
+  color: var(--text3);
+  font-weight: 400;
+}
+
+.proj-desc {
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--text2);
+  font-weight: 300;
+  flex: 1;
+}
+
+/* ── Stat row ── */
+.proj-stats {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding-top: 8px;
+  border-top: 1px solid var(--border);
+}
+
+.stat {
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text3);
+  font-weight: 500;
+}
+
+.stat strong {
+  display: block;
+  font-size: 16px;
+  letter-spacing: -0.01em;
+  font-weight: 600;
+  color: var(--lavender);
+}
+
+
+/* ════════════════════════════════════
+   TAGS (tech stack labels)
+   ════════════════════════════════════ */
+
+.exp-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 20px;
+}
+
+.tag {
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  font-weight: 500;
+}
+
+/* Tag color variants — add new ones here as needed */
+.tag-lav     { background: rgba(200, 180, 245, 0.12); color: var(--lavender); border: 1px solid rgba(200, 180, 245, 0.2); }
+.tag-mint    { background: rgba(168, 230, 206, 0.10); color: var(--mint);     border: 1px solid rgba(168, 230, 206, 0.2); }
+.tag-apricot { background: rgba(245, 200, 160, 0.10); color: var(--apricot);  border: 1px solid rgba(245, 200, 160, 0.2); }
+.tag-sky     { background: rgba(168, 212, 245, 0.10); color: var(--sky);      border: 1px solid rgba(168, 212, 245, 0.2); }
+
+
+/* ════════════════════════════════════
+   SKILL PILLS
+   ════════════════════════════════════ */
+
+.skill-pill {
+  font-size: 13px;
+  font-weight: 400;
+  padding: 7px 14px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border2);
+  color: var(--text2);
+  background: var(--surface);
+  transition: color var(--transition-fast), border-color var(--transition-fast), background var(--transition-fast);
+  cursor: default;
+}
+
+.skill-pill:hover {
+  color: var(--text);
+  border-color: var(--lavender);
+  background: rgba(200, 180, 245, 0.08);
+}
+
+
+/* ════════════════════════════════════
+   EDUCATION BADGES
+   ════════════════════════════════════ */
+
+.edu-badge {
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  font-weight: 500;
+}
+
+.edu-badge.good {
+  background: rgba(168, 230, 206, 0.12);
+  color: var(--mint);
+  border: 1px solid rgba(168, 230, 206, 0.2);
+}
+
+.edu-badge.year {
+  background: var(--surface);
+  color: var(--text3);
+  border: 1px solid var(--border);
+}
+
+
+/* ════════════════════════════════════
+   CTA BUTTONS (contact section)
+   ════════════════════════════════════ */
+
+.cta-link {
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 13px 28px;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+  display: inline-block;
+}
+
+.cta-primary {
+  background: rgba(200, 180, 245, 0.15);
+  color: var(--lavender);
+  border: 1px solid rgba(200, 180, 245, 0.35);
+}
+
+.cta-primary:hover {
+  background: rgba(200, 180, 245, 0.25);
+}
+
+.cta-secondary {
+  background: var(--surface);
+  color: var(--text2);
+  border: 1px solid var(--border2);
+}
+
+.cta-secondary:hover {
+  color: var(--text);
+  border-color: rgba(255, 255, 255, 0.3);
+}

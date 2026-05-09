@@ -1,0 +1,58 @@
+/*
+ * tokens.css
+ * ─────────────────────────────────────────────────────
+ * All design tokens live here: colors, fonts, spacing.
+ * Change a value once → it updates everywhere.
+ *
+ * To update the color palette, edit the :root variables.
+ * Planet colors are in js/solar.js → planetDefs array.
+ * ─────────────────────────────────────────────────────
+ */
+
+:root {
+  /* ── Backgrounds ── */
+  --bg:       #080714;
+  --bg2:      #0e0c1f;
+
+  /* ── Surfaces (cards, panels) ── */
+  --surface:  rgba(255, 255, 255, 0.04);
+  --surface2: rgba(255, 255, 255, 0.07);
+
+  /* ── Borders ── */
+  --border:   rgba(255, 255, 255, 0.08);
+  --border2:  rgba(255, 255, 255, 0.15);
+
+  /* ── Text ── */
+  --text:     #f0ecff;   /* primary */
+  --text2:    #9d97c0;   /* secondary / body */
+  --text3:    #5c5878;   /* muted / labels */
+
+  /* ── Brand accent colors ── */
+  --lavender: #c8b4f5;
+  --mint:     #a8e6ce;
+  --apricot:  #f5c8a0;
+  --sky:      #a8d4f5;
+  --sun:      #ffe8a0;
+  --accent:   #c8b4f5;   /* alias for lavender, use for primary CTAs */
+
+  /* ── Typography ── */
+  --font-display: 'Syne', sans-serif;
+  --font-body:    'DM Sans', sans-serif;
+
+  /* ── Spacing scale ── */
+  --space-xs:  8px;
+  --space-sm:  16px;
+  --space-md:  24px;
+  --space-lg:  48px;
+  --space-xl:  120px;
+
+  /* ── Radii ── */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-pill: 20px;
+
+  /* ── Transitions ── */
+  --transition-fast:   0.2s ease;
+  --transition-normal: 0.3s ease;
+}

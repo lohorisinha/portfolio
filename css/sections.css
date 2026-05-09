@@ -1,0 +1,197 @@
+/*
+ * sections.css
+ * ─────────────────────────────────────────────────────
+ * Layout for each portfolio section:
+ *   - Shared: section-label, section-title
+ *   - #experience
+ *   - #projects
+ *   - #skills + education
+ *   - #contact
+ * ─────────────────────────────────────────────────────
+ */
+
+/* ════════════════════════════════════
+   SHARED SECTION TYPOGRAPHY
+   ════════════════════════════════════ */
+
+.section-label {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text3);
+  font-weight: 500;
+  margin-bottom: 48px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* The decorative horizontal rule inside the label */
+.section-label span {
+  display: block;
+  width: 24px;
+  height: 1px;
+  background: var(--text3);
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(32px, 4vw, 52px);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+}
+
+/* Colored italic word in section titles */
+.section-title em {
+  color: var(--lavender);
+  font-style: normal;
+}
+
+
+/* ════════════════════════════════════
+   EXPERIENCE
+   ════════════════════════════════════ */
+
+#experience .exp-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2px;
+  margin-top: 60px;
+}
+
+
+/* ════════════════════════════════════
+   PROJECTS
+   ════════════════════════════════════ */
+
+#projects .projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 20px;
+  margin-top: 60px;
+}
+
+/* Colored top-right corner accent per card */
+.proj-card:nth-child(1) .proj-accent { background: var(--lavender); }
+.proj-card:nth-child(2) .proj-accent { background: var(--mint); }
+.proj-card:nth-child(3) .proj-accent { background: var(--apricot); }
+
+@media (max-width: 768px) {
+  #projects .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ════════════════════════════════════
+   SKILLS + EDUCATION
+   ════════════════════════════════════ */
+
+#skills .skills-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  margin-top: 60px;
+}
+
+.skill-group {
+  margin-bottom: 36px;
+}
+
+.skill-group-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text3);
+  margin-bottom: 16px;
+}
+
+.skill-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.edu-block {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 36px 40px;
+  margin-bottom: 20px;
+  transition: border-color var(--transition-normal);
+}
+
+.edu-block:hover {
+  border-color: var(--border2);
+}
+
+.edu-inst {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: -0.01em;
+}
+
+.edu-degree {
+  font-size: 13px;
+  color: var(--text2);
+  margin-top: 6px;
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+.edu-meta {
+  display: flex;
+  gap: 16px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  #skills .skills-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .edu-block {
+    padding: 24px;
+  }
+}
+
+
+/* ════════════════════════════════════
+   CONTACT
+   ════════════════════════════════════ */
+
+#contact {
+  padding-bottom: 160px;
+  background: radial-gradient(ellipse at 50% 100%, rgba(200, 180, 245, 0.04) 0%, transparent 70%);
+}
+
+.contact-center {
+  text-align: center;
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+.contact-center .section-label {
+  justify-content: center;
+}
+
+.contact-blurb {
+  font-size: 15px;
+  color: var(--text2);
+  font-weight: 300;
+  line-height: 1.8;
+  margin-bottom: 48px;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}

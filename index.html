@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lohori Sinha — Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet"/>
+
+  <!-- Stylesheets — order matters -->
+  <link rel="stylesheet" href="css/tokens.css"/>
+  <link rel="stylesheet" href="css/base.css"/>
+  <link rel="stylesheet" href="css/nav.css"/>
+  <link rel="stylesheet" href="css/hero.css"/>
+  <link rel="stylesheet" href="css/sections.css"/>
+  <link rel="stylesheet" href="css/components.css"/>
+</head>
+<body>
+
+  <!-- ── NAVIGATION ─────────────────────────────────────── -->
+  <nav>
+    <div class="nav-logo">LS</div>
+    <div class="nav-links">
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <!-- ── HERO / 3D SOLAR SYSTEM ─────────────────────────── -->
+  <section id="hero">
+    <canvas id="solarCanvas"></canvas>
+    <button id="returnBtn">← Galaxy view</button>
+    <div id="tooltip"></div>
+
+    <div class="hero-overlay">
+      <div class="hero-tag">CS Undergrad · KIIT 2028</div>
+      <h1 class="hero-name">Lohori<br><span>Sinha</span></h1>
+      <p class="hero-sub">Full-stack developer &amp; AI tinkerer. Building systems that process, predict, and ship — from OCR pipelines to gamified learning platforms.</p>
+    </div>
+    <div class="hero-hint">Explore ↓</div>
+  </section>
+
+  <!-- ── EXPERIENCE ─────────────────────────────────────── -->
+  <section id="experience">
+    <div class="section-label"><span></span>Experience</div>
+    <h2 class="section-title">Where I've <em>built</em></h2>
+
+    <div class="exp-grid">
+      <div class="exp-card reveal">
+        <div class="exp-header">
+          <div class="exp-org">Smart India Hackathon</div>
+          <div class="exp-period">Aug 2025 — Oct 2025</div>
+        </div>
+        <div class="exp-tags">
+          <span class="tag tag-lav">Flask</span>
+          <span class="tag tag-mint">MySQL</span>
+          <span class="tag tag-sky">Scikit-learn</span>
+          <span class="tag tag-apricot">Git</span>
+        </div>
+        <ul class="exp-bullets">
+          <li>Led cross-functional team of 6 developers, ranking 4th out of 600+ teams with a gamified STEM platform featuring AI-powered personalized learning paths.</li>
+          <li>Architected RESTful API backend using Flask and MySQL, implementing recommendation engine with scikit-learn achieving 85% prediction accuracy for student engagement patterns.</li>
+          <li>Managed sprint cycles with Git/GitHub, enforcing code review standards and resolving 40+ merge conflicts while maintaining CI/CD pipeline.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PROJECTS ───────────────────────────────────────── -->
+  <section id="projects">
+    <div class="section-label"><span></span>Projects</div>
+    <h2 class="section-title">Things I've <em>shipped</em></h2>
+
+    <div class="projects-grid">
+
+      <div class="proj-card reveal">
+        <div class="proj-accent"></div>
+        <div class="proj-num">01</div>
+        <div class="proj-name">Splyttr<sup>®</sup></div>
+        <div class="proj-desc">Full-stack AI-powered expense splitting web app. Processes receipt scans with Tesseract OCR, automates item categorization via Google Gemini API, and surfaces spending trends through six interactive Chart.js chart types.</div>
+        <div class="exp-tags">
+          <span class="tag tag-lav">React</span>
+          <span class="tag tag-mint">Node.js</span>
+          <span class="tag tag-sky">MongoDB</span>
+          <span class="tag tag-apricot">Gemini API</span>
+          <span class="tag tag-lav">JWT</span>
+        </div>
+        <div class="proj-stats">
+          <div class="stat"><strong>1,000+</strong>receipts/day</div>
+          <div class="stat"><strong>92%</strong>OCR accuracy</div>
+          <div class="stat"><strong>6</strong>chart types</div>
+        </div>
+      </div>
+
+      <div class="proj-card reveal">
+        <div class="proj-accent"></div>
+        <div class="proj-num">02</div>
+        <div class="proj-name">scriptcheck<sup>®</sup></div>
+        <div class="proj-desc">Open-source pip-installable CLI tool benchmarking OCR engines on Indic scripts (Hindi, Bengali, Odia). Implements preprocessing pipeline, modular engine abstraction, and generates self-contained HTML leaderboard reports.</div>
+        <div class="exp-tags">
+          <span class="tag tag-mint">Python</span>
+          <span class="tag tag-sky">OpenCV</span>
+          <span class="tag tag-lav">EasyOCR</span>
+          <span class="tag tag-apricot">PyPI</span>
+        </div>
+        <div class="proj-stats">
+          <div class="stat"><strong>3</strong>OCR engines</div>
+          <div class="stat"><strong>20</strong>Indic docs</div>
+          <div class="stat"><strong>CER/WER</strong>metrics</div>
+        </div>
+      </div>
+
+      <div class="proj-card reveal">
+        <div class="proj-accent"></div>
+        <div class="proj-num">03</div>
+        <div class="proj-name">SIH Platform</div>
+        <div class="proj-desc">Gamified STEM learning platform built for Smart India Hackathon. AI-powered recommendation engine personalizes learning paths per student, backed by Flask REST API and a MySQL data layer.</div>
+        <div class="exp-tags">
+          <span class="tag tag-apricot">Flask</span>
+          <span class="tag tag-mint">Scikit-learn</span>
+          <span class="tag tag-sky">MySQL</span>
+        </div>
+        <div class="proj-stats">
+          <div class="stat"><strong>85%</strong>accuracy</div>
+          <div class="stat"><strong>4th</strong>of 600+ teams</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── SKILLS + EDUCATION ─────────────────────────────── -->
+  <section id="skills">
+    <div class="section-label"><span></span>Skills &amp; Education</div>
+    <h2 class="section-title">The <em>toolkit</em></h2>
+
+    <div class="skills-layout">
+
+      <div class="skills-left">
+        <div class="skill-group reveal">
+          <div class="skill-group-title">Languages</div>
+          <div class="skill-pills">
+            <span class="skill-pill">Python</span>
+            <span class="skill-pill">JavaScript</span>
+            <span class="skill-pill">Java</span>
+            <span class="skill-pill">C</span>
+            <span class="skill-pill">SQL</span>
+            <span class="skill-pill">HTML5</span>
+            <span class="skill-pill">CSS3</span>
+          </div>
+        </div>
+        <div class="skill-group reveal">
+          <div class="skill-group-title">Frameworks &amp; Technologies</div>
+          <div class="skill-pills">
+            <span class="skill-pill">React</span>
+            <span class="skill-pill">Node.js</span>
+            <span class="skill-pill">Express</span>
+            <span class="skill-pill">Flask</span>
+            <span class="skill-pill">OpenCV</span>
+            <span class="skill-pill">Hugging Face</span>
+            <span class="skill-pill">REST APIs</span>
+          </div>
+        </div>
+        <div class="skill-group reveal">
+          <div class="skill-group-title">Databases</div>
+          <div class="skill-pills">
+            <span class="skill-pill">PostgreSQL</span>
+            <span class="skill-pill">MySQL</span>
+            <span class="skill-pill">MongoDB</span>
+          </div>
+        </div>
+        <div class="skill-group reveal">
+          <div class="skill-group-title">Libraries</div>
+          <div class="skill-pills">
+            <span class="skill-pill">NumPy</span>
+            <span class="skill-pill">Pandas</span>
+            <span class="skill-pill">Scikit-learn</span>
+            <span class="skill-pill">Matplotlib</span>
+            <span class="skill-pill">Seaborn</span>
+            <span class="skill-pill">Plotly</span>
+            <span class="skill-pill">Tesseract OCR</span>
+            <span class="skill-pill">EasyOCR</span>
+          </div>
+        </div>
+        <div class="skill-group reveal">
+          <div class="skill-group-title">Tools &amp; Cloud</div>
+          <div class="skill-pills">
+            <span class="skill-pill">Git</span>
+            <span class="skill-pill">GitHub</span>
+            <span class="skill-pill">Vercel</span>
+            <span class="skill-pill">Railway</span>
+            <span class="skill-pill">Linux</span>
+            <span class="skill-pill">VS Code</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="skills-right">
+        <div class="section-label" style="margin-bottom:28px;"><span></span>Education</div>
+
+        <div class="edu-block reveal">
+          <div class="edu-inst">Kalinga Institute of Industrial Technology</div>
+          <div class="edu-degree">B.Tech — Computer Science and Engineering<br>Bhubaneswar, Odisha</div>
+          <div class="edu-meta">
+            <span class="edu-badge good">CGPA 8.90</span>
+            <span class="edu-badge year">2024 – 2028</span>
+          </div>
+        </div>
+
+        <div class="edu-block reveal">
+          <div class="edu-inst">G. D. Birla Centre for Education</div>
+          <div class="edu-degree">High School Diploma<br>Kolkata, West Bengal</div>
+          <div class="edu-meta">
+            <span class="edu-badge good">ICSE 96%</span>
+            <span class="edu-badge good">ISC 85%</span>
+            <span class="edu-badge year">Graduated April 2024</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── CONTACT ─────────────────────────────────────────── -->
+  <section id="contact">
+    <div class="contact-center">
+      <div class="section-label"><span></span>Get in touch</div>
+      <h2 class="section-title">Let's <em>connect</em></h2>
+      <p class="contact-blurb">Currently open to internships, research collaborations, and interesting problems worth solving. Drop me a message — I usually respond fast.</p>
+      <div class="contact-links">
+        <a href="mailto:lohorisinha06@gmail.com" class="cta-link cta-primary">lohorisinha06@gmail.com</a>
+        <a href="https://linkedin.com/in/lohorisinha" target="_blank" class="cta-link cta-secondary">LinkedIn</a>
+        <a href="https://github.com/lohorisinha" target="_blank" class="cta-link cta-secondary">GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ─────────────────────────────────────────── -->
+  <footer>
+    <p>© 2026 Lohori Sinha. Kolkata / Bhubaneswar, IN.</p>
+    <p class="footer-phone">+91 70444 33559</p>
+  </footer>
+
+  <!-- Three.js CDN (must come before solar.js) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+  <!-- Scripts -->
+  <script src="js/solar.js"></script>
+  <script src="js/reveal.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+/*
+ * nav.css
+ * ─────────────────────────────────────────────────────
+ * Fixed top navigation bar.
+ * To change nav height, adjust padding here and also
+ * update #returnBtn top offset in hero.css.
+ * ─────────────────────────────────────────────────────
+ */
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 48px;
+  /* Fades into the hero below, not a solid bar */
+  background: linear-gradient(to bottom, rgba(8, 7, 20, 0.95), transparent);
+  pointer-events: none; /* lets clicks fall through to canvas */
+}
+
+.nav-logo {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 15px;
+  letter-spacing: 0.12em;
+  color: var(--text);
+  text-transform: uppercase;
+  pointer-events: all;
+}
+
+.nav-links {
+  display: flex;
+  gap: 36px;
+  pointer-events: all;
+}
+
+.nav-links a {
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text2);
+  font-weight: 500;
+  transition: color var(--transition-fast);
+}
+
+.nav-links a:hover {
+  color: var(--text);
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  nav {
+    padding: 16px 24px;
+  }
+
+  .nav-links {
+    gap: 20px;
+  }
+}
